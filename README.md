@@ -1,3 +1,5 @@
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a5fe58de-20c6-414a-9def-fcf882c68243" />
+
 # Sistem Manajemen Aset Terpadu Enterprise — PT Nusa Integra Mandiri
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.3.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
