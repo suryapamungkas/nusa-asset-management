@@ -1,0 +1,31 @@
+{
+  "name": "manajemen-aset-perusahaan",
+  "version": "2.0.0",
+  "description": "Sistem Manajemen Aset Terpadu PT Nusa Integra Mandiri - Apple Inspired Experience",
+  "author": "Nur Hidayat Surya Pamungkas",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "^13.1.1",
+    "lucide-react": "^1.37.0",
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "eslint": "^10.9.1",
+    "eslint-config-next": "^16.3.3",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
+    "typescript": "7.0.2"
+  }
+}
