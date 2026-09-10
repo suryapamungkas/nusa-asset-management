@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   description: "Platform Manajemen Aset Terpadu Enterprise PT Nusa Integra Mandiri dengan Pelacakan QR Code, Mutasi Cabang, Kalkulasi Depresiasi, dan Tata Kelola PMO Lengkap.",
   authors: [
     { name: "Nur Hidayat Surya Pamungkas" },
-    { name: "Kelompok 4 - MPIT" },
   ],
   creator: "Nur Hidayat Surya Pamungkas",
   publisher: "PT Nusa Integra Mandiri",

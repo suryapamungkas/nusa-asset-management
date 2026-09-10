@@ -100,10 +100,12 @@ export function PmoTabs({ activePmoTab }: PmoTabsProps) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
               {PMO_TEAM.map((member) => (
                 <div
-                  key={member.role}
+                  key={member.name}
                   className="p-3.5 rounded-2xl bg-[var(--canvas-soft)] border border-[var(--line)] space-y-1.5 text-xs"
                 >
-                  <span className="font-bold text-sky-600 block">{member.role}</span>
+                  {member.role ? (
+                    <span className="font-bold text-sky-600 block">{member.role}</span>
+                  ) : null}
                   <strong className="text-sm font-extrabold text-[var(--ink)] block">
                     {member.name}
                   </strong>

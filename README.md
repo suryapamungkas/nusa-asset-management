@@ -13,9 +13,8 @@ Aplikasi web modern Enterprise Asset Management (EAM) berbasis **Next.js 16 (App
 
 ## 👤 Author & Owner Information
 
-- **Owner & Lead Architect**: **Nur Hidayat Surya Pamungkas**
-- **Institusi / Entitas**: PT Nusa Integra Mandiri & Kelompok 4 - MPIT
-- **Peran Proyek**: System Analyst & Lead Architect (SA)
+- **Owner / Author**: **Nur Hidayat Surya Pamungkas**
+- **Institusi / Entitas**: PT Nusa Integra Mandiri
 - **Lisensi Proyek**: [MIT License](LICENSE) (Copyright &copy; 2026 Nur Hidayat Surya Pamungkas)
 
 ---

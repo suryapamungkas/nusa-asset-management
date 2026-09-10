@@ -21,8 +21,8 @@ export const PMO_TEAM = [
     deliverables: "BPMN Diagram, BRD (Business Requirement Document), Gap Analysis, KPI Framework"
   },
   {
-    role: "System Analyst & Lead Architect (SA)",
-    name: "Nur Hidayat Surya Pamungkas, S.Kom",
+    role: "",
+    name: "Nur Hidayat Surya Pamungkas",
     focus: "System Requirements (SRS), Architecture, UI/UX Wireframe, Database & API",
     deliverables: "SRS Document, ERD & Schema, QR Code Engine Architecture, REST API Specification"
   },

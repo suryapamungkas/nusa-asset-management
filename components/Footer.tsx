@@ -101,7 +101,7 @@ export function Footer() {
             <ul>
               <li><a href="#tab-pmo-overview">PT Nusa Integra Mandiri</a></li>
               <li><a href="#tab-pmo-overview">Profil Bisnis & AS-IS vs TO-BE</a></li>
-              <li><a href="#tab-pmo-team">Tim Pengembang (Kelompok 4)</a></li>
+              <li><a href="#tab-pmo-team">Tim Pengembang</a></li>
             </ul>
           </div>
         </div>
@@ -109,7 +109,7 @@ export function Footer() {
         {/* Legal & Copyright */}
         <div className="footer-legal">
           <div className="footer-legal-copy">
-            Hak Cipta &copy; 2026 PT Nusa Integra Mandiri. Dikembangkan oleh <strong>Nur Hidayat Surya Pamungkas</strong> (Kelompok 4). Seluruh hak cipta dilindungi undang-undang.
+            Hak Cipta &copy; 2026 PT Nusa Integra Mandiri. Dikembangkan oleh <strong>Nur Hidayat Surya Pamungkas</strong>. Seluruh hak cipta dilindungi undang-undang.
           </div>
           <ul className="footer-legal-links">
             <li><a href="#tab-pmo-overview">Kebijakan Privasi</a></li>
