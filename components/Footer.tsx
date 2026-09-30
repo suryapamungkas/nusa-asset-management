@@ -21,7 +21,7 @@ export function Footer() {
             2. Perhitungan depresiasi finansial menggunakan metode garis lurus (*straight-line depreciation*) sesuai Standar Akuntansi Keuangan (PSAK 16) dengan parameter nilai residu dan masa manfaat terstandarisasi.
           </p>
           <p>
-            3. Seluruh alur mutasi, pemeliharaan preventif, dan penghapusan aset tunduk pada matriks RACI dan Change Control Board (CCB) proyek.
+            3. Seluruh alur mutasi, pemeliharaan preventif, dan pelepasan aset tercatat dalam log audit sistem operasional secara real-time.
           </p>
         </div>
 
@@ -68,40 +68,40 @@ export function Footer() {
           </div>
 
           <div className="footer-col">
-            <h3>Dokumentasi PMO (MPIT)</h3>
+            <h3>Layanan & Fitur Sistem</h3>
             <ul>
-              <li><a href="#tab-pmo-charter">Project Charter & Milestone</a></li>
-              <li><a href="#tab-pmo-wbs">WBS Level 3 (7 Fasa Proyek)</a></li>
-              <li><a href="#tab-pmo-schedule">Jadwal Proyek Gantt (12 Minggu)</a></li>
-              <li><a href="#tab-pmo-team">RACI Matrix 5 Peran Tim</a></li>
-              <li><a href="#tab-pmo-budget">Rencana Anggaran (Rp 168.5M)</a></li>
-              <li><a href="#tab-pmo-risk">Risk Register & Heatmap 5x5</a></li>
-              <li><a href="#tab-pmo-qa">10 Quality Gate Criteria</a></li>
+              <li><a href="#tab-uat-runner">UAT Test Runner (8 Skenario)</a></li>
+              <li><a href="#tab-depreciation">Kalkulasi Garis Lurus (PSAK 16)</a></li>
+              <li><a href="#action-export">Ekspor Rekapitulasi CSV</a></li>
+              <li><a href="#action-search">Pencarian Cepat Aset (⌘K)</a></li>
+              <li><a href="#tab-scanner">Verifikasi Label QR Lapangan</a></li>
+              <li><a href="#tab-transfer">Permohonan Mutasi Multi-Cabang</a></li>
+              <li><a href="#tab-maintenance">Kalender Pemeliharaan Rutin</a></li>
             </ul>
 
-            <h3 className="mt-4">Rencana Manajemen</h3>
+            <h3 className="mt-4">Pelepasan & Audit</h3>
             <ul>
-              <li><a href="#tab-pmo-comm">Communication Management Plan</a></li>
-              <li><a href="#tab-pmo-procurement">Procurement Management Plan</a></li>
-              <li><a href="#tab-pmo-integration">Integration Management Plan</a></li>
+              <li><a href="#tab-disposal">Log Penghapusan / Scrap Aset</a></li>
+              <li><a href="#tab-depreciation">Audit Nilai Sisa (Salvage)</a></li>
+              <li><a href="#tab-inventory">Rekonsiliasi Fisik Inventaris</a></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h3>Standar & Tata Kelola</h3>
+            <h3>Standar Operasional</h3>
             <ul>
-              <li><a href="#tab-pmo-overview">PMBOK 7th Edition Guide</a></li>
-              <li><a href="#tab-pmo-integration">Agile Scrum 2-Week Sprints</a></li>
-              <li><a href="#tab-pmo-qa">UAT Test Runner (8 Skenario)</a></li>
-              <li><a href="#tab-pmo-overview">Standar Akuntansi PSAK 16</a></li>
-              <li><a href="#tab-pmo-risk">ISO 31000 Risk Management</a></li>
+              <li><a href="#tab-depreciation">Standar Akuntansi PSAK 16</a></li>
+              <li><a href="#tab-transfer">SOP Mutasi Antar-Cabang</a></li>
+              <li><a href="#tab-maintenance">Pemeliharaan Preventif Terjadwal</a></li>
+              <li><a href="#tab-inventory">Otorisasi Custodian Resmi</a></li>
+              <li><a href="#tab-uat-runner">Verifikasi Acceptance Test</a></li>
             </ul>
 
             <h3 className="mt-4">Tentang Perusahaan</h3>
             <ul>
-              <li><a href="#tab-pmo-overview">PT Nusa Integra Mandiri</a></li>
-              <li><a href="#tab-pmo-overview">Profil Bisnis & AS-IS vs TO-BE</a></li>
-              <li><a href="#tab-pmo-team">Tim Pengembang</a></li>
+              <li><a href="#tab-dashboard">PT Nusa Integra Mandiri</a></li>
+              <li><a href="#tab-inventory">Distributor Jasa & Logistik</a></li>
+              <li><a href="#tab-dashboard">Enterprise Asset Portal v2.4</a></li>
             </ul>
           </div>
         </div>
@@ -112,10 +112,10 @@ export function Footer() {
             Hak Cipta &copy; 2026 PT Nusa Integra Mandiri. Dikembangkan oleh <strong>Nur Hidayat Surya Pamungkas</strong>. Seluruh hak cipta dilindungi undang-undang.
           </div>
           <ul className="footer-legal-links">
-            <li><a href="#tab-pmo-overview">Kebijakan Privasi</a></li>
-            <li><a href="#tab-pmo-charter">Ketentuan Proyek</a></li>
-            <li><a href="#tab-pmo-qa">Quality Assurance</a></li>
-            <li><a href="#tab-pmo-overview">Peta Situs Sistem</a></li>
+            <li><a href="#tab-inventory">Kebijakan Inventaris</a></li>
+            <li><a href="#tab-dashboard">Ketentuan Sistem</a></li>
+            <li><a href="#tab-uat-runner">Quality Assurance</a></li>
+            <li><a href="#tab-dashboard">Peta Situs Sistem</a></li>
           </ul>
           <div className="footer-legal-region">
             Indonesia (Bahasa Indonesia) &bull; Enterprise Edition v2.4

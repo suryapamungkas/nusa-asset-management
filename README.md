@@ -23,9 +23,9 @@ Aplikasi web modern Enterprise Asset Management (EAM) berbasis **Next.js 16 (App
 
 ## 🚀 Fitur Unggulan Sistem
 
-Platform ini mengintegrasikan dua domain utama: **Operasional Manajemen Aset** dan **Dokumentasi Tata Kelola PMO (Project Management Office)**:
+Platform ini menyediakan sistem operasional pengelolaan aset enterprise secara menyeluruh:
 
-### 1. Modul Aplikasi Manajemen Aset (Operational EAM)
+### Modul Aplikasi Manajemen Aset (Operational EAM)
 - **Dashboard Eksekutif**: Ringkasan KPI real-time (Total Aset, Nilai Perolehan, Nilai Buku Terkini, Akumulasi Depresiasi, Distribusi Regional, Status Aset Aktif/Maintenance/Disposed).
 - **Inventaris Aset Multi-Cabang**: Pencarian cerdas instan, filter kategori (*IT Hardware, Kendaraan, Mesin & Peralatan, Furnitur & Perlengkapan*), filter cabang (*Jakarta, Surabaya, Medan, Makassar*), dan modal detail komprehensif.
 - **Registrasi Aset Terstandarisasi**: Form input terstruktur dengan perhitungan otomatis estimasi beban penyusutan tahunan, masa manfaat, dan penugasan custodian resmi.
@@ -35,18 +35,6 @@ Platform ini mengintegrasikan dua domain utama: **Operasional Manajemen Aset** d
 - **Kalkulator Depresiasi Nilai Buku (PSAK 16)**: Implementasi metode Garis Lurus (*Straight-Line Depreciation*) otomatis setiap akhir periode pelaporan.
 - **Pelepasan & Penghapusan Aset (Disposal)**: Pencatatan formal pelepasan aset (penjualan/lelang, rusak total, usang) beserta nilai residu dan alasan penghapusan.
 - **UAT Interactive Test Runner**: 8 skenario pengujian Acceptance Criteria end-to-end dengan verifikasi status *PASS (100%)*.
-
-### 2. Modul Tata Kelola PMO (PMBOK 7th Edition & Agile Governance)
-- **Konteks Proyek & Analisis Gap**: Profil bisnis PT Nusa Integra Mandiri, komparasi kondisi *AS-IS* vs *TO-BE*.
-- **Struktur Tim & RACI Matrix**: Pembagian peran 5 personil inti PMO (*PM, BA, SA, CRRM, QDM*) dan penugasan deliverables.
-- **Project Charter**: Tujuan terukur (SMART Objectives), batasan ruang lingkup (*In-Scope & Out-of-Scope*), dan stakeholder utama.
-- **WBS & Kamus WBS**: Penguraian paket kerja bertingkat dari inisiasi hingga serah terima operasional.
-- **Jadwal Proyek (Gantt & Milestones)**: Timeline implementasi terukur selama 12 minggu.
-- **Anggaran & Baseline Biaya**: Alokasi anggaran Rp 168.500.000 dengan rincian biaya langsung dan cadangan kontinjensi (*Contingency Reserve 10%*).
-- **Manajemen Risiko (Risk Register 5x5)**: Matriks risiko R-001 s.d. R-008 mencakup resistensi cabang, deviasi integrasi, hingga strategi mitigasi.
-- **Quality Assurance & 10 Quality Gates**: Standar penerimaan kualitas perangkat lunak enterprise.
-- **Rencana Manajemen Komunikasi & Pengadaan**: Matriks distribusi informasi dan seleksi vendor pengadaan perangkat keras QR.
-- **Manajemen Integrasi & Change Control (CCB)**: Tata kelola persetujuan perubahan ruang lingkup melalui *Change Control Board*.
 
 ---
 
@@ -70,11 +58,11 @@ nusa-asset-management/
 ├── app/
 │   ├── globals.css          # Styling global, token warna, Apple glassmorphism
 │   ├── layout.tsx           # Layout dasar & metadata SEO / author
-│   └── page.tsx             # Halaman utama dengan dual-mode state
+│   └── page.tsx             # Halaman utama aplikasi manajemen aset
 ├── components/
 │   ├── AssetDetailModal.tsx # Modal detail informasi aset fisik
 │   ├── AssetDrawers.tsx     # Slide-out drawer (Search, Mutasi, Profil Role)
-│   ├── Footer.tsx           # Footer informasi tata kelola, hak cipta & tim
+│   ├── Footer.tsx           # Footer informasi direktori, hak cipta & tim
 │   ├── MegaMenu.tsx         # Navigasi sticky interaktif
 │   ├── NimLogo.tsx          # Logo korporat PT Nusa Integra Mandiri
 │   └── views/               # Komponen tampilan per modul
@@ -86,11 +74,9 @@ nusa-asset-management/
 │       ├── MaintenanceTab.tsx
 │       ├── DepreciationTab.tsx
 │       ├── DisposalTab.tsx
-│       ├── UatRunnerTab.tsx
-│       └── PmoTabs.tsx
+│       └── UatRunnerTab.tsx
 ├── lib/
 │   ├── assetData.ts         # Dataset dummy aset, formula depresiasi PSAK 16, generator QR
-│   ├── pmoData.ts           # Dataset tata kelola PMO, profil tim, charter, WBS, risiko
 │   └── types.ts             # Definisi TypeScript interface & enum
 ├── public/
 │   └── nim_logo.jpg         # Asset gambar identitas korporat
@@ -146,48 +132,30 @@ nusa-asset-management/
 
 ## 🚢 Panduan Deploy / Push ke GitHub
 
-Ikuti langkah-langkah berikut untuk mengunggah proyek ini ke repositori GitHub Anda:
+Ikuti langkah-langkah berikut untuk memperbarui atau mengunggah proyek ini ke repositori GitHub:
 
-### 1. Inisialisasi Git Lokal (jika belum ada)
 ```bash
-git init
-```
-
-### 2. Tambahkan Semua File dan Buat Komitmen Pertama
-```bash
+# Tambahkan seluruh perubahan
 git add .
-git commit -m "feat: inisialisasi awal sistem manajemen aset enterprise PT Nusa Integra Mandiri v2.0"
-```
 
-### 3. Buat Repositori Baru di GitHub
-1. Masuk ke akun GitHub Anda di [https://github.com/new](https://github.com/new).
-2. Beri nama repositori (misalnya: `nusa-asset-management` atau `manajemen-aset-perusahaan`).
-3. Biarkan opsi *"Initialize this repository with a README"* tidak dicentang (karena file sudah dibuat secara lokal).
-4. Klik tombol **Create repository**.
+# Buat komitmen pembaruan
+git commit -m "feat: pembaruan sistem Enterprise Asset Management PT Nusa Integra Mandiri"
 
-### 4. Hubungkan Repositori Lokal ke GitHub dan Push
-```bash
-# Ubah branch utama menjadi main
-git branch -M main
-
-# Tambahkan URL remote repositori Anda
-git remote add origin https://github.com/<username-anda>/<nama-repo>.git
-
-# Unggah (push) branch main ke GitHub
-git push -u origin main
+# Unggah ke GitHub
+git push origin main
 ```
 
 ---
 
-## 🌐 Panduan Deploy ke Cloud (Vercel / Netlify)
+## 🌐 Panduan Deploy ke Cloud (Vercel)
 
 Aplikasi Next.js ini sudah diuji dan 100% siap untuk dideploy langsung ke **Vercel**:
 
 1. Kunjungi [Vercel](https://vercel.com) dan login menggunakan akun GitHub Anda.
-2. Klik **Add New Project** lalu pilih repositori GitHub yang baru saja di-push.
+2. Pilih repositori GitHub Anda.
 3. Vercel akan secara otomatis mendeteksi framework **Next.js**.
 4. Klik tombol **Deploy**.
-5. Website akan selesai dideploy dalam 1-2 menit dengan URL publik otomatis (misal: `https://nusa-asset-management.vercel.app`).
+5. Website akan selesai dideploy secara instan dengan URL publik otomatis.
 
 ---
 

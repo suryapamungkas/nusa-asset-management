@@ -101,7 +101,7 @@ export const navCategories: NavCategory[] = [
     ],
     bottomLinks: [
       { title: "Cetak Ulang Label QR Fisik", href: "#tab-inventory" },
-      { title: "Panduan SOP Mutasi Barang", href: "#tab-pmo-overview" },
+      { title: "Panduan SOP Mutasi Barang", href: "#tab-transfer" },
     ],
     secondaryLinks: [
       { title: "Approval Mutasi oleh Manajer", href: "#tab-transfer" },
@@ -140,7 +140,7 @@ export const navCategories: NavCategory[] = [
     ],
     bottomLinks: [
       { title: "Ekspor Laporan Fiskal Bulanan", href: "#action-export" },
-      { title: "Kebijakan Standar Akuntansi PSAK 16", href: "#tab-pmo-overview" },
+      { title: "Kebijakan Standar Akuntansi PSAK 16", href: "#tab-depreciation" },
     ],
     secondaryLinks: [
       { title: "Aset IT & Komputer (Masa Manfaat 4 Thn)", href: "#tab-depreciation" },
@@ -151,7 +151,7 @@ export const navCategories: NavCategory[] = [
     tertiaryLinks: [
       { title: "Perhitungan Beban Penyusutan Bulanan", href: "#tab-depreciation" },
       { title: "Audit Nilai Residu Aset Rusak", href: "#tab-disposal" },
-      { title: "Rekonsiliasi Sub-Ledger Aset Tetap", href: "#tab-pmo-budget" },
+      { title: "Rekonsiliasi Sub-Ledger Aset Tetap", href: "#tab-depreciation" },
     ],
     featured: {
       tag: "FORMULA GARIS LURUS",
@@ -159,48 +159,6 @@ export const navCategories: NavCategory[] = [
       subtitle: "(Harga Perolehan - Nilai Sisa) / Masa Manfaat. Terhitung otomatis setiap bulan berjalan.",
       price: "PSAK 16 Baseline",
       href: "#tab-depreciation",
-    },
-  },
-  {
-    id: "pmo",
-    label: "Dokumentasi PMO",
-    href: "#pmo",
-    eyebrows: {
-      primary: "Tata Kelola & Framework Proyek",
-      secondary: "Rencana Pengendalian & Risiko",
-      tertiary: "Kesiapan Go-Live & Audit",
-    },
-    primaryLinks: [
-      { title: "Ringkasan Profil & AS-IS vs TO-BE", href: "#tab-pmo-overview" },
-      { title: "Project Charter & Milestone M1-M6", href: "#tab-pmo-charter", badge: "PMBOK" },
-      { title: "Work Breakdown Structure (WBS Level 3)", href: "#tab-pmo-wbs", badge: "7 Fasa" },
-      { title: "Project Schedule & Gantt (W1-W12)", href: "#tab-pmo-schedule" },
-      { title: "RACI Matrix (5 Peran Tim Proyek)", href: "#tab-pmo-team" },
-      { title: "Cost & Budget Plan (Rp 168.5M)", href: "#tab-pmo-budget" },
-      { title: "Risk Register & Heatmap 5x5", href: "#tab-pmo-risk", badge: "8 Risiko" },
-      { title: "Quality Assurance & UAT Runner", href: "#tab-pmo-qa", badge: "100% Pass" },
-    ],
-    bottomLinks: [
-      { title: "Jalankan Simulasi 8 Test Case UAT", href: "#tab-uat-runner" },
-      { title: "Unduh Master Dokumen PDF/Doc", href: "#tab-pmo-overview" },
-    ],
-    secondaryLinks: [
-      { title: "Communication Management Plan", href: "#tab-pmo-comm" },
-      { title: "Procurement Plan (Make-or-Buy)", href: "#tab-pmo-procurement" },
-      { title: "Integration Plan & Change Control Board", href: "#tab-pmo-integration" },
-      { title: "Struktur Organisasi 5 Anggota Tim", href: "#tab-pmo-team" },
-    ],
-    tertiaryLinks: [
-      { title: "Quality Gate: 10 Kriteria Go-Live", href: "#tab-pmo-qa" },
-      { title: "Strategi Mitigasi Resistensi Cabang", href: "#tab-pmo-risk" },
-      { title: "Metodologi Hybrid PMBOK + Agile", href: "#tab-pmo-integration" },
-    ],
-    featured: {
-      tag: "PMO AUDIT STATUS",
-      title: "100% Ready for Go-Live",
-      subtitle: "Seluruh artefak PMBOK dan pengujian fungsional telah disetujui oleh Project Sponsor.",
-      price: "12 Minggu Timeline",
-      href: "#tab-pmo-charter",
     },
   },
 ];

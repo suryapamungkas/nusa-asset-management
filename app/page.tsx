@@ -7,9 +7,7 @@ import {
   RefreshCw,
   UserCheck,
   Sun,
-  Moon,
-  Layers,
-  FileText
+  Moon
 } from "lucide-react";
 import { MegaMenu, navCategories } from "@/components/MegaMenu";
 import { Footer } from "@/components/Footer";
@@ -43,22 +41,15 @@ import { MaintenanceTab } from "@/components/views/MaintenanceTab";
 import { DepreciationTab } from "@/components/views/DepreciationTab";
 import { DisposalTab } from "@/components/views/DisposalTab";
 import { UatRunnerTab } from "@/components/views/UatRunnerTab";
-import { PmoTabs, PmoTabType } from "@/components/views/PmoTabs";
 
 export default function Home() {
   // Theme state
   const [theme, setTheme] = useState<"light" | "night">("light");
 
-  // Master Modes: 'app' (Aplikasi Aset) or 'pmo' (Dokumentasi PMO)
-  const [masterMode, setMasterMode] = useState<"app" | "pmo">("app");
-
-  // Tabs for 'app' mode
+  // Tabs for asset management
   const [activeAppTab, setActiveAppTab] = useState<
     "dashboard" | "inventory" | "register" | "scanner" | "transfer" | "maintenance" | "depreciation" | "disposal" | "uat-runner"
   >("dashboard");
-
-  // Tabs for 'pmo' mode
-  const [activePmoTab, setActivePmoTab] = useState<PmoTabType>("overview");
 
   // Drawers and Modal state
   const [drawerPanel, setDrawerPanel] = useState<"search" | "bag" | "profile" | null>(null);
@@ -166,13 +157,8 @@ export default function Home() {
   };
 
   const handleNavigateMega = (href: string) => {
-    if (href.startsWith("#tab-pmo-")) {
-      const pmoTab = href.replace("#tab-pmo-", "") as PmoTabType;
-      setMasterMode("pmo");
-      setActivePmoTab(pmoTab);
-    } else if (href.startsWith("#tab-")) {
+    if (href.startsWith("#tab-")) {
       const appTab = href.replace("#tab-", "") as any;
-      setMasterMode("app");
       setActiveAppTab(appTab);
     } else if (href === "#action-search") {
       setDrawerPanel("search");
@@ -362,7 +348,6 @@ export default function Home() {
               href="#top"
               className="nim-brand-group group"
               onClick={() => {
-                setMasterMode("app");
                 setActiveAppTab("dashboard");
               }}
             >
@@ -390,29 +375,6 @@ export default function Home() {
 
           {/* Right Actions: Mode Switcher & Tools */}
           <div className="flex items-center gap-2">
-            {/* Master Mode Switcher Pill */}
-            <div className="flex items-center p-0.5 rounded-full bg-[var(--canvas-soft)] border border-[var(--line)]">
-              <button
-                onClick={() => setMasterMode("app")}
-                className={`px-2.5 py-1 rounded-full text-[11px] font-bold transition flex items-center gap-1 ${
-                  masterMode === "app"
-                    ? "bg-sky-600 text-white shadow-sm"
-                    : "text-[var(--ink-soft)] hover:text-[var(--ink)]"
-                }`}
-              >
-                <Layers size={12} /> Aset
-              </button>
-              <button
-                onClick={() => setMasterMode("pmo")}
-                className={`px-2.5 py-1 rounded-full text-[11px] font-bold transition flex items-center gap-1 ${
-                  masterMode === "pmo"
-                    ? "bg-indigo-600 text-white shadow-sm"
-                    : "text-[var(--ink-soft)] hover:text-[var(--ink)]"
-                }`}
-              >
-                <FileText size={12} /> PMO
-              </button>
-            </div>
 
             {/* Quick Search Drawer Button */}
             <button
@@ -474,66 +436,38 @@ export default function Home() {
           ======================================================= */}
       <div className="nim-subnav-bar">
         <div className="nim-subnav-container">
-          {masterMode === "app" ? (
-            <div className="nim-pill-list">
-              {(
-                [
-                  { id: "dashboard", label: "Dashboard Ringkasan" },
-                  { id: "inventory", label: "Katalog Inventaris" },
-                  { id: "register", label: "Registrasi & QR" },
-                  { id: "scanner", label: "Pemindai QR (<5s)" },
-                  { id: "transfer", label: "Mutasi Cabang", badge: pendingTransfersCount },
-                  { id: "maintenance", label: "Pemeliharaan / Servis" },
-                  { id: "depreciation", label: "Depresiasi Finansial" },
-                  { id: "disposal", label: "Penghapusan / Scrap" },
-                  { id: "uat-runner", label: "UAT Test Runner" },
-                ] as Array<{
-                  id: "dashboard" | "inventory" | "register" | "scanner" | "transfer" | "maintenance" | "depreciation" | "disposal" | "uat-runner";
-                  label: string;
-                  badge?: number;
-                }>
-              ).map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveAppTab(tab.id)}
-                  className={`nim-pill-btn ${activeAppTab === tab.id ? "active" : ""}`}
-                >
-                  <span>{tab.label}</span>
-                  {tab.badge && tab.badge > 0 ? (
-                    <span className="nim-pill-badge">
-                      {tab.badge}
-                    </span>
-                  ) : null}
-                </button>
-              ))}
-            </div>
-          ) : (
-            <div className="nim-pill-list">
-              {(
-                [
-                  { id: "overview", label: "Profil & Gap Analysis" },
-                  { id: "team", label: "Tim & RACI Matrix" },
-                  { id: "charter", label: "Project Charter" },
-                  { id: "wbs", label: "WBS Level 3" },
-                  { id: "schedule", label: "Jadwal Gantt (W1-12)" },
-                  { id: "budget", label: "Biaya & Anggaran" },
-                  { id: "risk", label: "Risk Register & Heatmap" },
-                  { id: "qa", label: "QA & 10 Quality Gates" },
-                  { id: "comm", label: "Manajemen Komunikasi" },
-                  { id: "procurement", label: "Pengadaan (Make/Buy)" },
-                  { id: "integration", label: "Manajemen Integrasi" },
-                ] as const
-              ).map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActivePmoTab(tab.id)}
-                  className={`nim-pill-btn ${activePmoTab === tab.id ? "active" : ""}`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-          )}
+          <div className="nim-pill-list">
+            {(
+              [
+                { id: "dashboard", label: "Dashboard Ringkasan" },
+                { id: "inventory", label: "Katalog Inventaris" },
+                { id: "register", label: "Registrasi & QR" },
+                { id: "scanner", label: "Pemindai QR (<5s)" },
+                { id: "transfer", label: "Mutasi Cabang", badge: pendingTransfersCount },
+                { id: "maintenance", label: "Pemeliharaan / Servis" },
+                { id: "depreciation", label: "Depresiasi Finansial" },
+                { id: "disposal", label: "Penghapusan / Scrap" },
+                { id: "uat-runner", label: "UAT Test Runner" },
+              ] as Array<{
+                id: "dashboard" | "inventory" | "register" | "scanner" | "transfer" | "maintenance" | "depreciation" | "disposal" | "uat-runner";
+                label: string;
+                badge?: number;
+              }>
+            ).map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveAppTab(tab.id)}
+                className={`nim-pill-btn ${activeAppTab === tab.id ? "active" : ""}`}
+              >
+                <span>{tab.label}</span>
+                {tab.badge && tab.badge > 0 ? (
+                  <span className="nim-pill-badge">
+                    {tab.badge}
+                  </span>
+                ) : null}
+              </button>
+            ))}
+          </div>
 
           {/* Regional Indicator */}
           <div className="hidden lg:flex items-center gap-2 text-xs text-[var(--ink-soft)] shrink-0">
@@ -549,12 +483,8 @@ export default function Home() {
           MAIN CONTENT VIEWPORT
           ======================================================= */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
-        {/* =======================================================
-            APP MODE VIEWS
-            ======================================================= */}
-        {masterMode === "app" && (
-          <AnimatePresence mode="wait">
-            {activeAppTab === "dashboard" && (
+        <AnimatePresence mode="wait">
+          {activeAppTab === "dashboard" && (
               <DashboardTab
                 exportCsv={exportCsv}
                 setActiveAppTab={setActiveAppTab}
@@ -653,14 +583,6 @@ export default function Home() {
               />
             )}
           </AnimatePresence>
-        )}
-
-        {/* =======================================================
-            PMO MODE VIEWS (PMBOK / AGILE GOVERNANCE ARTIFACTS)
-            ======================================================= */}
-        {masterMode === "pmo" && (
-          <PmoTabs activePmoTab={activePmoTab} />
-        )}
       </main>
 
       {/* =======================================================

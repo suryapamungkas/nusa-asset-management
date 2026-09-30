@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Sistem Manajemen Aset Perusahaan — PT Nusa Integra Mandiri",
-  description: "Platform Manajemen Aset Terpadu Enterprise PT Nusa Integra Mandiri dengan Pelacakan QR Code, Mutasi Cabang, Kalkulasi Depresiasi, dan Tata Kelola PMO Lengkap.",
+  description: "Platform Manajemen Aset Terpadu Enterprise PT Nusa Integra Mandiri dengan Pelacakan QR Code, Mutasi Cabang, Kalkulasi Depresiasi Garis Lurus, dan Pemeliharaan Aset Fisik.",
   authors: [
     { name: "Nur Hidayat Surya Pamungkas" },
   ],
