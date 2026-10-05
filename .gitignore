@@ -41,3 +41,7 @@ next-env.d.ts.bak
 .vscode/
 *.swp
 *.swo
+
+# AI / Agent Skills
+skills/
+/skills
