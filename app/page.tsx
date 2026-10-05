@@ -329,6 +329,22 @@ export default function Home() {
 
   const pendingTransfersCount = transfers.filter((t) => t.status === "Pending Manager Approval").length;
 
+  // Drilldown navigation from dashboard cards & charts
+  const handleDrilldownBranch = (branch: string) => {
+    setFilterBranch(branch);
+    setActiveAppTab("inventory");
+  };
+
+  const handleDrilldownCategory = (category: string) => {
+    setFilterCategory(category);
+    setActiveAppTab("inventory");
+  };
+
+  const handleDrilldownStatus = (status: string) => {
+    setFilterStatus(status);
+    setActiveAppTab("inventory");
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[var(--canvas)] text-[var(--ink)]">
       {/* =======================================================
@@ -489,6 +505,9 @@ export default function Home() {
                 exportCsv={exportCsv}
                 setActiveAppTab={setActiveAppTab}
                 pendingTransfersCount={pendingTransfersCount}
+                onFilterBranch={handleDrilldownBranch}
+                onFilterCategory={handleDrilldownCategory}
+                onFilterStatus={handleDrilldownStatus}
               />
             )}
 

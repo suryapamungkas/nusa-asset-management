@@ -367,7 +367,7 @@ export function AssetDrawers({
                       Standar Tata Kelola:
                     </p>
                     <p className="text-[11px]">
-                      &bull; Standar PMBOK 7th Edition & Agile Scrum Hybrid
+                      &bull; Standar Manajemen Aset ISO 55001 &amp; ITIL v4
                     </p>
                     <p className="text-[11px]">
                       &bull; Akuntansi Aset Tetap PSAK 16 (Metode Garis Lurus)

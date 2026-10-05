@@ -63,10 +63,10 @@ export const navCategories: NavCategory[] = [
       { title: "Pencarian Aset Cepat (⌘K)", href: "#action-search" },
     ],
     secondaryLinks: [
-      { title: "Kantor Pusat (Jakarta) — 242 Unit", href: "#tab-inventory" },
-      { title: "Cabang Surabaya — 118 Unit", href: "#tab-inventory" },
-      { title: "Cabang Medan — 94 Unit", href: "#tab-inventory" },
-      { title: "Cabang Makassar — 70 Unit", href: "#tab-inventory" },
+      { title: "Kantor Pusat (Jakarta): 242 Unit", href: "#tab-inventory" },
+      { title: "Cabang Surabaya: 118 Unit", href: "#tab-inventory" },
+      { title: "Cabang Medan: 94 Unit", href: "#tab-inventory" },
+      { title: "Cabang Makassar: 70 Unit", href: "#tab-inventory" },
       { title: "Aset dalam Pengiriman (In-Transit)", href: "#tab-transfer" },
     ],
     tertiaryLinks: [

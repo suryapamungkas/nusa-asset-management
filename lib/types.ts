@@ -80,30 +80,3 @@ export interface UatCase {
   testedAt?: string;
   notes?: string;
 }
-
-export interface RiskItem {
-  id: string;
-  description: string;
-  category: 'Technical' | 'Operational' | 'Financial' | 'Organizational';
-  likelihood: number; // 1-5
-  impact: number; // 1-5
-  score: number;
-  mitigation: string;
-  owner: string;
-}
-
-export interface WbsNode {
-  code: string;
-  title: string;
-  pic: string;
-  durationWeeks: string;
-  deliverable: string;
-}
-
-export interface MilestoneItem {
-  code: string;
-  name: string;
-  targetWeek: string;
-  description: string;
-  status: 'Completed' | 'In-Progress' | 'Scheduled';
-}
