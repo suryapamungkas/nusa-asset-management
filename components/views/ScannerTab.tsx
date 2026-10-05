@@ -4,18 +4,15 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   QrCode,
-  Zap,
   Camera,
   CameraOff,
   Clock,
   CheckCircle2,
-  AlertTriangle,
   RefreshCw,
   Printer,
   ShieldCheck,
   Building2,
-  User,
-  DollarSign
+  User
 } from "lucide-react";
 import { Asset } from "@/lib/types";
 import { calculateDepreciation, formatRupiah, generateSimpleQrSvg } from "@/lib/assetData";

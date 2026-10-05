@@ -4,14 +4,9 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Trash2,
-  DollarSign,
-  FileText,
-  ShieldAlert,
   Plus,
   CheckCircle2,
-  X,
-  Building2,
-  UserCheck
+  X
 } from "lucide-react";
 import { DisposalRecord, BranchLocation } from "@/lib/types";
 import { formatRupiah } from "@/lib/assetData";

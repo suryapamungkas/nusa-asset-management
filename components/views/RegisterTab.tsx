@@ -6,11 +6,6 @@ import {
   CheckCircle2,
   Plus,
   Printer,
-  Sparkles,
-  QrCode,
-  Building2,
-  Tag,
-  ShieldCheck,
   TrendingDown
 } from "lucide-react";
 import { Asset, AssetCategory, BranchLocation } from "@/lib/types";

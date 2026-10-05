@@ -4,14 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Play,
-  CheckCircle2,
-  Clock,
   Terminal,
-  ShieldCheck,
-  Check,
-  RotateCcw,
-  ChevronDown,
-  ChevronUp,
   Cpu
 } from "lucide-react";
 import { UatCase } from "@/lib/types";

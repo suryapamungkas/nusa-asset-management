@@ -2,21 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  X,
-  Printer,
-  QrCode,
-  Shield,
-  Calendar,
-  DollarSign,
-  User,
-  MapPin,
-  Tag,
-  Building2,
-  TrendingDown,
-  CheckCircle2,
-  Clock
-} from "lucide-react";
+import { X, Printer, QrCode } from "lucide-react";
 import { Asset } from "@/lib/types";
 import { formatRupiah, calculateDepreciation, generateSimpleQrSvg } from "@/lib/assetData";
 

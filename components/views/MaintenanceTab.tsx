@@ -2,17 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Wrench,
-  Calendar,
-  AlertTriangle,
-  CheckCircle2,
-  Clock,
-  DollarSign,
-  Check,
-  ShieldCheck,
-  FileCheck
-} from "lucide-react";
+import { CheckCircle2, Check } from "lucide-react";
 import { MaintenanceRecord } from "@/lib/types";
 import { formatRupiah } from "@/lib/assetData";
 

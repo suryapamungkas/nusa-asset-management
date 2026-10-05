@@ -6,14 +6,7 @@ import {
   Plus,
   Check,
   CheckCircle2,
-  Clock,
-  Truck,
-  ArrowRight,
-  ShieldCheck,
-  Building2,
-  User,
-  XCircle,
-  FileText
+  ArrowRight
 } from "lucide-react";
 import { TransferRequest } from "@/lib/types";
 

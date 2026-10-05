@@ -18,8 +18,7 @@ import {
   ArrowRight,
   ShieldCheck,
   Clock,
-  CheckCircle2,
-  AlertCircle
+  CheckCircle2
 } from "lucide-react";
 
 interface DashboardTabProps {

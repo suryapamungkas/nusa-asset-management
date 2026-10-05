@@ -5,12 +5,7 @@ import { motion } from "framer-motion";
 import {
   TrendingUp,
   Download,
-  Sliders,
-  DollarSign,
-  Calculator,
-  PieChart,
-  ArrowRight,
-  ShieldCheck
+  Sliders
 } from "lucide-react";
 import { Asset } from "@/lib/types";
 import { calculateDepreciation, formatRupiah } from "@/lib/assetData";

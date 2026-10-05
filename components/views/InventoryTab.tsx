@@ -17,7 +17,6 @@ import {
   Laptop,
   Car,
   Network,
-  Printer as PrintIcon,
   Armchair,
   CheckSquare,
   Square
@@ -182,7 +181,7 @@ export function InventoryTab({
       case "Jaringan":
         return <Network size={14} className="text-blue-600 dark:text-blue-400" />;
       case "Percetakan":
-        return <PrintIcon size={14} className="text-amber-600 dark:text-amber-400" />;
+        return <Printer size={14} className="text-amber-600 dark:text-amber-400" />;
       default:
         return <Armchair size={14} className="text-purple-600 dark:text-purple-400" />;
     }

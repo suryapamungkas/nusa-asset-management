@@ -98,32 +98,6 @@
     backdrop-filter: blur(1.25rem) saturate(1.25);
   }
 
-  .nav-shell {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    align-items: center;
-    max-inline-size: 100rem;
-    min-block-size: 4.5rem;
-    margin-inline: auto;
-    padding-inline: var(--page-pad);
-  }
-
-  .brand-link { display: inline-flex; align-items: center; inline-size: max-content; }
-
-  .brand {
-    display: inline-flex;
-    align-items: end;
-    gap: 0.15rem;
-    color: var(--ink);
-    font-family: var(--display);
-    font-size: 1.05rem;
-    font-weight: 900;
-    letter-spacing: -0.105em;
-    line-height: 1;
-  }
-
-  .brand-mark { inline-size: 2rem; block-size: 1.3rem; fill: currentColor; }
-
   .desktop-nav {
     display: flex;
     align-items: center;
@@ -152,58 +126,6 @@
   .desktop-nav a.active-nav {
     color: var(--ink);
     background: var(--canvas-muted);
-  }
-
-  .nav-actions { display: flex; align-items: center; justify-content: flex-end; gap: 0.2rem; }
-
-  .icon-button {
-    position: relative;
-    display: inline-grid;
-    place-items: center;
-    min-inline-size: 2.5rem;
-    min-block-size: 2.5rem;
-    padding: 0.35rem;
-    border-radius: 50%;
-    background: transparent;
-    color: var(--ink);
-    cursor: pointer;
-    transition: background 180ms ease, transform 180ms ease;
-  }
-
-  .icon-button svg { inline-size: 1.1rem; block-size: 1.1rem; stroke-width: 1.85; }
-  .icon-button:hover { background: var(--canvas-muted); transform: translateY(-1px); }
-
-  .cart-count {
-    position: absolute;
-    inset-block-start: 0.12rem;
-    inset-inline-end: 0.13rem;
-    display: grid;
-    place-items: center;
-    min-inline-size: 1rem;
-    min-block-size: 1rem;
-    border: 1px solid var(--canvas);
-    border-radius: 50%;
-    background: var(--ink);
-    color: var(--canvas);
-    font-size: 0.58rem;
-    font-weight: 800;
-  }
-
-  .menu-trigger { display: none; }
-
-  .mobile-menu {
-    display: none;
-    padding: 0.4rem var(--page-pad) 1rem;
-    background: var(--canvas);
-  }
-
-  .mobile-menu a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-block-size: 3rem;
-    border-block-end: 1px solid var(--line);
-    font-weight: 700;
   }
 
   /* ==========================================================================
@@ -276,19 +198,7 @@
     color: var(--ink);
     text-decoration: underline;
   }
-
-  .footer-retailer {
-    padding-block: 1rem;
-    color: var(--ink-soft);
-    font-size: 0.72rem;
-  }
-
-  .footer-retailer a {
-    color: var(--accent);
-    text-decoration: underline;
-  }
-
-  .footer-legal-bar {
+  .footer-legal {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -299,7 +209,7 @@
     font-size: 0.68rem;
   }
 
-  .footer-copyright-text {
+  .footer-legal-copy {
     font-weight: 550;
     color: var(--ink-faint);
   }
@@ -307,7 +217,10 @@
   .footer-legal-links {
     display: flex;
     align-items: center;
-    gap: 0.65rem;
+    gap: 0.85rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .footer-legal-links a {
@@ -321,45 +234,10 @@
     text-decoration: underline;
   }
 
-  .legal-divider {
-    color: var(--line-strong);
-    font-size: 0.6rem;
+  .footer-legal-region {
+    color: var(--ink-faint);
+    font-size: 0.68rem;
   }
-
-  .footer-region button.region-btn {
-    background: transparent;
-    border: 0;
-    color: var(--ink-soft);
-    font-size: 0.72rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 160ms ease;
-  }
-
-  .footer-region button.region-btn:hover {
-    color: var(--ink);
-  }
-
-  .utility-dialog { inline-size: min(calc(100% - 2rem), 35rem); max-inline-size: 35rem; padding: 0; border: 1px solid var(--line-strong); border-radius: var(--radius-md); background: var(--canvas); color: var(--ink); box-shadow: var(--shadow-lift); }
-  .utility-dialog::backdrop { background: rgba(0,0,0,.46); backdrop-filter: blur(.3rem); }
-  .dialog-content { padding: clamp(2rem, 6vw, 3.5rem); }
-  .dialog-content h2 { max-inline-size: 14ch; margin-block-start: .75rem; font-family: var(--display); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 780; letter-spacing: -.07em; line-height: .98; }
-  .dialog-close { position: absolute; inset-block-start: 1rem; inset-inline-end: 1rem; display: grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; border-radius: 50%; background: var(--canvas-muted); color: var(--ink); cursor: pointer; }
-  .dialog-close:hover { background: var(--ink); color: var(--canvas); }
-  .dialog-close svg { inline-size: 1rem; }
-  .dialog-content label { display: block; margin-block: 2rem .55rem; font-size: .73rem; font-weight: 760; }
-  .search-box { display: flex; align-items: center; gap: .7rem; padding-block-end: .5rem; border-block-end: 1px solid var(--ink); }
-  .search-box svg { flex: none; inline-size: 1.2rem; }
-  .search-box input { min-inline-size: 0; inline-size: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 1rem; }
-  .dialog-note { max-inline-size: 40ch; margin-block-start: 1.1rem; color: var(--ink-soft); font-size: .82rem; line-height: 1.55; }
-  .dialog-button { inline-size: 100%; margin-block-start: 2rem; }
-  .bag-item { display: grid; grid-template-columns: 5.5rem 1fr auto; gap: 1rem; align-items: center; margin-block-start: 2rem; padding-block: 1rem; border-block: 1px solid var(--line); }
-  .bag-item img { inline-size: 5.5rem; aspect-ratio: 1; border-radius: .85rem; object-fit: cover; }
-  .bag-item div { display: flex; flex-direction: column; gap: .18rem; font-size: .76rem; }
-  .bag-item span { color: var(--ink-soft); }
-  .bag-item button { display: grid; place-items: center; inline-size: 2rem; block-size: 2rem; border-radius: 50%; background: var(--canvas-muted); color: var(--ink); cursor: pointer; }
-  .bag-item button:hover { background: var(--ink); color: var(--canvas); }
-  .bag-item svg { inline-size: .9rem; }
 
   /* ==========================================================================
      Apple-Style Mega Menu Styles (High Precision Enterprise ITAM)

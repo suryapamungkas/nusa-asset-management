@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Search, ArrowRight, CheckCircle2, ShieldCheck, UserCheck, RefreshCw, Send } from "lucide-react";
+import { X, Search, CheckCircle2, ShieldCheck, RefreshCw, Send } from "lucide-react";
 import { Asset, UserRole, TransferRequest } from "@/lib/types";
-import { formatRupiah, calculateDepreciation, generateSimpleQrSvg } from "@/lib/assetData";
+import { formatRupiah, calculateDepreciation } from "@/lib/assetData";
 
 interface AssetDrawersProps {
   panel: "search" | "bag" | "profile" | null;
