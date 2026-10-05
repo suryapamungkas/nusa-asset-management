@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/94a5ff94-49fe-4caf-b5b7-7121c7c6abab" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7e8670f0-c603-455a-bd2c-e334947928ca" />
 
 # Sistem Manajemen Aset Terpadu Enterprise: PT Nusa Integra Mandiri
 
